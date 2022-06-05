@@ -13,9 +13,3 @@ public class SpringBootMicroservice3ApiGatewayApplication {
 	}
 
 }
-
-//Admin
-//eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjoiUk9MRV9BRE1JTiIsInVzZXJJZCI6MiwiZXhwIjoxNjU0MzExNzg1fQ.946Lonc14JGn3QxQJS2IWMGzCXfPKB7dDc-bfK3qYnCALFxdq_kdaCJk3FIZi9g647hB7mmzHfRFP739UmNn-A
-
-//User
-//eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMSIsInJvbGVzIjoiUk9MRV9VU0VSIiwidXNlcklkIjoxLCJleHAiOjE2NTQzMTQwNjN9.ObhVTuzmPdCbwVZHe0xGHZnpE6Ve-0AS8C6wul7oPlhqtoTh4PnaqS4tZMzcce0PFgyTU2bZwqJqzh4bBRpFTw
