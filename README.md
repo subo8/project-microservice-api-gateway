@@ -56,17 +56,23 @@ mvn spring-boot:build-image
 ## Kubernetes commands
 ````
 1. Start minikube with expose ports
-minikube start --driver=docker --ports=30090:30090,30091:30091,30092:30092
+minikube start --driver=docker --ports=30090:30090,30060:30060
 
 2. Open minikube dashboard 
 minikube dashboard
 
 3. Deploy secrets
-kubectl apply -f mysql-secret.yaml
-kubectl apply -f product-secret.yaml
-
+kubectl apply -f 2_mysql-secret.yml
 4. Deploy services
-kubectl apply -f mysql-deployment.yaml
+kubectl apply -f 1_configmaps.yml
+kubectl apply -f 3_mysql.yml
+kubectl apply -f 4_eureka.yml
+kubectl apply -f 5_config.yml
+kubectl apply -f 6_product.yml
+kubectl apply -f 7_payment.yml
+kubectl apply -f 8_shipment.yml
+kubectl apply -f 9_order.yml
+kubectl apply -f 10_apigateway.yml
 # project-microservice-api-gateway
 
 ````
