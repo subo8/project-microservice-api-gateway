@@ -19,8 +19,8 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "name", nullable = false)
-    private LocalDateTime createTime;
+    @Column(name = "create_time", nullable = false)
+    private LocalDateTime create_time;
 
     //role field
     @Enumerated(EnumType.STRING)
