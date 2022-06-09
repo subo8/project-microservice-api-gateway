@@ -202,3 +202,47 @@ GET /gateway/payment/{id} HTTP/1.1
 Host: localhost:5555
 Content-Type: application/json
 ```
+### Transaction
+#### Get transaction
+
+```
+GET /gateway/transaction HTTP/1.1
+Host: localhost:5555
+Content-Type: application/json
+```
+### Shipping
+#### Add shipping
+
+```
+GET /gateway/shipment HTTP/1.1
+Host: localhost:5555
+Content-Type: application/json
+```
+
+#### Get shipping
+
+```
+GET /gateway/shipment HTTP/1.1
+Host: localhost:5555
+Content-Type: application/json
+{
+  "order_id": 1,
+  "is_delivered": false,
+  "shipment_status": "preparing",
+  "shipment_time": "2022-06-08T07:50:49.891Z",
+}
+```
+
+#### Update shipping
+
+```
+GET /gateway/shipment HTTP/1.1
+Host: localhost:5555
+Content-Type: application/json
+{
+  "order_id": 1,
+  "is_delivered": true,
+  "shipment_status": "delivered",
+  "shipment_time": "2022-06-09T07:50:49.891Z",
+}
+```
