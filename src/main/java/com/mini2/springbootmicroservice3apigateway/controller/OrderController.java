@@ -14,9 +14,19 @@ public class OrderController {
     @Autowired
     private OrderServiceRequest orderServiceRequest;
 
-    @PostMapping
-    public ResponseEntity<?> saveOrder(@RequestBody Object order) {
-        return new ResponseEntity<>(orderServiceRequest.saveOrder(order), HttpStatus.CREATED);
+    @PostMapping("/add")
+    public ResponseEntity<?> placeOrder() {
+        return new ResponseEntity<>(orderServiceRequest.placeOrder(), HttpStatus.CREATED);
+    }
+
+    @GetMapping
+    public ResponseEntity<?> getAllOrders() {
+        return ResponseEntity.ok(orderServiceRequest.listOrders());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getOrderById(@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(orderServiceRequest.getOrderById(id));
     }
 
     @GetMapping
