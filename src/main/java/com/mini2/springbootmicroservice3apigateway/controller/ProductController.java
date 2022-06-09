@@ -12,20 +12,22 @@ public class ProductController {
     @Autowired
     private ProductServiceRequest productServiceRequest;
 
+    @GetMapping
+    public ResponseEntity<?> getAllProducts() {
+        return ResponseEntity.ok(productServiceRequest.getProducts());
+    }
+
     @PostMapping
     public ResponseEntity<?> saveProduct(@RequestBody Object product) {
-        return new ResponseEntity<>(productServiceRequest.saveProduct(product), HttpStatus.CREATED);
+        return new ResponseEntity<>(productServiceRequest.addProduct(product), HttpStatus.CREATED);
     }
 
     @DeleteMapping("{productId}")
-    public ResponseEntity<?> deleteProduct(@PathVariable Long productId) {
+    public ResponseEntity<?> deleteProduct(@PathVariable Long productId, @RequestBody Object payment) {
         productServiceRequest.deleteProduct(productId);
 
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping
-    public ResponseEntity<?> getAllProducts() {
-        return ResponseEntity.ok(productServiceRequest.getAllProducts());
-    }
+
 }

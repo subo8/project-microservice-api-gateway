@@ -12,12 +12,21 @@ import java.util.List;
         configuration = FeignConfiguration.class
 )
 public interface ProductServiceRequest {
+
     @PostMapping
-    Object saveProduct(@RequestBody Object requestBody);
+    Object addProduct(@RequestBody Object requestBody);
+
+    @GetMapping
+    List<Object> getProducts();
 
     @DeleteMapping("{productId}")
     void deleteProduct(@PathVariable("productId") Long productId);
 
-    @GetMapping
-    List<Object> getAllProducts();
+//    Older versions
+//    @GetMapping
+//    List<Object> getAllProducts();
+
+//    @PostMapping
+//    Object saveProduct(@RequestBody Object requestBody);
+
 }
