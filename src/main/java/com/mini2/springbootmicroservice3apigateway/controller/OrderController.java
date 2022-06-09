@@ -16,7 +16,8 @@ public class OrderController {
 
     @PostMapping("/add")
     public ResponseEntity<?> placeOrder() {
-        return new ResponseEntity<>(orderServiceRequest.placeOrder(), HttpStatus.CREATED);
+        orderServiceRequest.placeOrder();
+        return new ResponseEntity<>("Order created", HttpStatus.CREATED);
     }
 
     @GetMapping
@@ -29,8 +30,8 @@ public class OrderController {
         return ResponseEntity.ok(orderServiceRequest.getOrderById(id));
     }
 
-    @GetMapping
-    public ResponseEntity<?> getAllOrdersOfAuthorizedUser(@AuthenticationPrincipal UserPrincipal userPrincipal) {
-        return ResponseEntity.ok(orderServiceRequest.getAllOrderOfUser(userPrincipal.getId()));
-    }
+//    @GetMapping
+//    public ResponseEntity<?> getAllOrdersOfAuthorizedUser(@AuthenticationPrincipal UserPrincipal userPrincipal) {
+//        return ResponseEntity.ok(orderServiceRequest.getAllOrderOfUser(userPrincipal.getId()));
+//    }
 }

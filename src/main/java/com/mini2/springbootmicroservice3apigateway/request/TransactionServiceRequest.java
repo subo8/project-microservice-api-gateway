@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
-@FeignClient(value = "shipment-service", path = "/api/shipment", configuration = FeignConfiguration.class)
+@FeignClient(value = "transaction-service", path = "/transaction", configuration = FeignConfiguration.class)
 public interface TransactionServiceRequest {
 
     @GetMapping
     List<Object> getAllTransactions();
 
-    @PostMapping
+    @PostMapping("add")
     Object addTransaction(@RequestBody Object requestBody);
 }

@@ -9,21 +9,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 
 @FeignClient(value = "order-service", // microservice-application-name
-                path = "/api/order", // pre-path for service endpoints
-
+                path = "/order", // pre-path for service endpoints
                 configuration = FeignConfiguration.class)
-public interface OrderServiceRequest {
 
-        @PostMapping
+public interface OrderServiceRequest {
+        @PostMapping("add")
         Object placeOrder();
 
-        @GetMapping("{userId}")
-        List<Object> getAllOrderOfUser(@PathVariable("userId") Long userId);
+//        @GetMapping("{userId}")
+//        List<Object> getAllOrderOfUser(@PathVariable("userId") Long userId);
 
         @GetMapping
         List<Object> listOrders();
 
-        @GetMapping("{productId}")
-        Integer getOrderById(@PathVariable("productId") Integer orderId);
+        @GetMapping("{id}")
+        Object getOrderById(@PathVariable("id") Integer orderId);
 
 }

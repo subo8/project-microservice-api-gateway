@@ -1,6 +1,11 @@
 # Mini-Project-2: E-Store
-In this project we're (studentID: 613799, 613812) implemented
+In this project we're (studentID: 613799, 613812) implemented eStore service, contains 9 microservices. This time we tried to create all services from the scratch for learning microservice architecture.
+We implemented discovery service, config service, api gateway and user sign up and sign in with JWT token and other microservices. 
 
+Also, we used Cloud Vault for our secret management and minkube's secret management. 
+
+First time when apply YAML files it will be take some time to download images. Please wait to load next YML file until previous deployment is successful.
+kubectl apply -f "file name"
 ## Tech stacks
 1. Spring boot 
 2. JJWT (json web token)
