@@ -26,7 +26,7 @@ kubectl apply -f "file name"
     5. Transaction
     6. Shipping
 
-### Docker commands
+## Docker commands
 
 ````
 1.Create jar file
@@ -53,7 +53,7 @@ docker push subo8/mini2-apigateway
 mvn spring-boot:build-image
 ````
 
-### Kubernetes commands
+## Kubernetes commands
 ````
 1. Start minikube with expose ports
 minikube start --driver=docker --ports=30090:30090,30091:30091,30092:30092
@@ -70,7 +70,7 @@ kubectl apply -f mysql-deployment.yaml
 # project-microservice-api-gateway
 
 ````
-### Endpoints
+## Endpoints
 
 ### User
 #### User sign-up
@@ -194,7 +194,6 @@ Content-Type: application/json
   "totalPrice": 35.25
 }
 ```
-
 #### Get one payment
 
 ```
@@ -218,9 +217,7 @@ GET /gateway/shipment HTTP/1.1
 Host: localhost:5555
 Content-Type: application/json
 ```
-
 #### Get shipping
-
 ```
 GET /gateway/shipment HTTP/1.1
 Host: localhost:5555
